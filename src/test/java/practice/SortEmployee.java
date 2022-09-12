@@ -12,7 +12,7 @@ public class SortEmployee {
         employees[1]=new Employee(9,"Paul");
         employees[2]=new Employee(1,"Vish");
         employees[3]=new Employee(10,"Ame");
-        Arrays.sort(employees);
+        Arrays.sort(employees,Employee.NameComparator);
         System.out.println("Sorted Class:-"+Arrays.toString(employees));
 
     }

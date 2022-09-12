@@ -1,5 +1,7 @@
 package practice;
 
+import java.util.Comparator;
+
 public class Employee implements Comparable <Employee>{
     int id;
     String sName;
@@ -24,6 +26,11 @@ public class Employee implements Comparable <Employee>{
     public void setsName(String sName) {
         this.sName = sName;
     }
+    public static Comparator<Employee> NameComparator=new Comparator<Employee>() {
+        public int compare(Employee o1, Employee o2) {
+            return o1.getsName().compareTo(o2.getsName());
+        }
+    };
 
 
 
