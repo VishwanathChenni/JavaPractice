@@ -1,5 +1,3 @@
-/target/
-/target
-pom.xml
-/target/test-classes/
-/target/
+out/
+target/
+.idea/

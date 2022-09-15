@@ -43,7 +43,7 @@ public class Employee implements Comparable <Employee>{
         return this.id - o.id;
     }
     public String toString(){
-        return "[id="+this.id+",name="+this.sName+"]";
+        return "[id is="+this.id+",name="+this.sName+"]";
     }
 
 
