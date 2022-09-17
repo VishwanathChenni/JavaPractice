@@ -2,32 +2,31 @@ package practice;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-public class TestRunner {
+@SuppressWarnings("unchecked")
+class TestRunner {
     @Test
-    public void fnWordCount(){
+    void fnWordCount(){
         System.out.println("Hello World!");
         String sMyString="Welcome to Hong Kong and Hong Kong Welcomes you";
         Set set=new HashSet();
 
         String[] myArray=sMyString.split(" ");
 
-        for(int i=0;i<myArray.length;i++){
-           set.add(myArray[i]);
-        }
-        Iterator iterator=set.iterator();
-        while (iterator.hasNext()){
-            String sMyString1= (String) iterator.next();
-            int count=0;
-            for(int i=0;i<myArray.length;i++){
-                if(sMyString1.equalsIgnoreCase(myArray[i])){
+        Collections.addAll(set, myArray);
+        for (Object o : set) {
+            String sMyString1 = (String) o;
+            int count = 0;
+            for (String s : myArray) {
+                if (sMyString1.equalsIgnoreCase(s)) {
                     count++;
                 }
             }
-            System.out.println("Word:-"+sMyString1+" occurred :-"+count+" times");
+            System.out.println("Word:-" + sMyString1 + " occurred :-" + count + " times");
         }
     }
 }

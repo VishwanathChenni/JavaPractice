@@ -1,6 +1,6 @@
 package practice;
 
-public class Sample {
+class Sample {
     public static void fnMyFunction(){
         System.out.println("Hello");
     }

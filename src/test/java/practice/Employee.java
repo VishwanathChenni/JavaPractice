@@ -2,9 +2,9 @@ package practice;
 
 import java.util.Comparator;
 
-public class Employee implements Comparable <Employee>{
-    int id;
-    String sName;
+class Employee implements Comparable <Employee>{
+    private int id;
+    private String sName;
 
     public Employee(int iID, String sName) {
         this.id=iID;
@@ -19,7 +19,7 @@ public class Employee implements Comparable <Employee>{
         this.id = id;
     }
 
-    public String getsName() {
+    private String getsName() {
         return sName;
     }
 
@@ -33,17 +33,13 @@ public class Employee implements Comparable <Employee>{
 //        }
 //    };
 
-    public static Comparator<Employee> NameComparator=new Comparator<Employee>() {
-        public int compare(Employee o1, Employee o2) {
-            return o1.getsName().compareTo(o2.getsName());
-        }
-    };
+    public static Comparator<Employee> NameComparator= (o1, o2) -> o1.getsName().compareTo(o2.getsName());
 //    To Sort By ID
     public int compareTo(Employee o) {
         return this.id - o.id;
     }
     public String toString(){
-        return "[id ="+this.id+",name="+this.sName+"]";
+        return "[id is ="+this.id+",name="+this.sName+"]";
     }
 
 

@@ -1,7 +1,7 @@
 package practice;
 
 public class AnimalSingleToneClass {
-    public static AnimalSingleToneClass single_instance=null;
+    private static AnimalSingleToneClass single_instance=null;
     private AnimalSingleToneClass(){
 
     }
