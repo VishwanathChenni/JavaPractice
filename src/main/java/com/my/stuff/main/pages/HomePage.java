@@ -1,5 +1,6 @@
 package com.my.stuff.main.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,12 +15,15 @@ public class HomePage {
       this.driver=driver;
       PageFactory.initElements(driver,this);
   }
-    // Method to type EmailId
     public void typeEmailId(String Id){
 //       emailID.sendKeys(Id);
     }
     public void ClickLinkDropDown(){
         linkDropDwon.click();
+    }
+
+    public void fnClick(String sLinkText){
+      driver.findElement(By.linkText(sLinkText)).click();
     }
 
 }

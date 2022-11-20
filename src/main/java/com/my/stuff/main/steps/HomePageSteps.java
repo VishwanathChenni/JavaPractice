@@ -16,7 +16,6 @@ public class HomePageSteps {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://the-internet.herokuapp.com/");
         HomePage homePage= new HomePage(driver);
-//        homePage.typeEmailId("MyEmail");
         homePage.ClickLinkDropDown();
     }
 
